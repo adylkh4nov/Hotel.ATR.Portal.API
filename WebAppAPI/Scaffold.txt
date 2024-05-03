@@ -1,2 +1,1 @@
-Scaffold-DbContext -Connection "data source=Olzhas;initial catalog=Finanse;user id=sa;password=123;MultipleActiveResultSets=True;application name=EntityFramework; TrustServerCertificate=True"
--Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "Data" -Context "HotelAtrContext"
+Scaffold-DbContext -Connection "data source=178.89.186.221, 1434;initial catalog=TestAppDb;user id=TestAppUser;password=8Kq*rp781;MultipleActiveResultSets=True;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "Data" -Context "Context"

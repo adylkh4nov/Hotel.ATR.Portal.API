@@ -1,5 +1,6 @@
 @WebAppAPI_HostAddress = http://localhost:5261
-
+//http://api.adylkhanov.satbayevproject.kz
+//http://localhost:5261
 GET {{WebAppAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 

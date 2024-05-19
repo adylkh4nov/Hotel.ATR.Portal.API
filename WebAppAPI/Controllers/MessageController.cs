@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
+
 using Microsoft.AspNetCore.Mvc;
-using WebAppAPI.Data;
 using WebAppAPI.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using WebAppAPI.Data;
 
 namespace WebAppAPI.Controllers
 {
@@ -22,10 +22,10 @@ namespace WebAppAPI.Controllers
             var data = _context.Messages;
             return data;
         }
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public Message Get(int Id)
         {
-            var data = _context.Messages.FirstOrDefault(x => x.id == Id);
+			var data = _context.Messages.FirstOrDefault(x => x.Id == Id);
             return data;
 
         }
@@ -36,9 +36,10 @@ namespace WebAppAPI.Controllers
             _context.SaveChanges();
             return message;
         }
+        [HttpPut]
         public StatusCodeResult Put([FromBody] Message msg)
         {
-            var data = _context.Messages.FirstOrDefault(x => x.id.Equals(msg.id));
+            var data = _context.Messages.FirstOrDefault(x => x.Id.Equals(msg.Id));
 
             if (data != null)
             {
@@ -55,10 +56,10 @@ namespace WebAppAPI.Controllers
 
             else return NotFound();
         }
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public void Delete(int Id)
         {
-            var data = _context.Messages.FirstOrDefault(x => x.id == Id);
+            var data = _context.Messages.FirstOrDefault(x => x.Id == Id);
             _context.Messages.Remove(data);
             _context.SaveChanges();
         }

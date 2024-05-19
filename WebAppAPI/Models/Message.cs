@@ -1,8 +1,12 @@
-﻿namespace WebAppAPI.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace WebAppAPI.Models
 {
 	public class Message
 	{
-		public int id {  get; set; }
+
+		public int Id {  get; set; }
 		public string? Email { get; set; } 
 		public string? Fullname { get; set; }
 		public string? Company { get; set; }
